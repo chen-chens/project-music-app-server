@@ -1,9 +1,9 @@
-import cors, { CorsOptions } from "cors";
+import { CorsOptions } from "cors";
 
-export const corsConfigs: CorsOptions = {
-    preflightContinue: true,
-    origin: [
-        "http://localhost:3000", // dev
-        
-    ]
-}
+const corsConfigs: CorsOptions = {
+  preflightContinue: true,
+  origin: [
+    "http://localhost:3000", // dev
+  ],
+};
+export default corsConfigs;

@@ -5,7 +5,7 @@ import express from "express";
 import morgan from "morgan";
 
 import corsConfigs from "./configs/corsConfig";
-import userRoutes from "./routes/v1/users";
+import router from "./routes";
 
 // 引入環境變數
 dotenv.config();
@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // HTTP 夾帶資訊轉成 JSON 格式
 app.use(express.json());
 
-// 引入路徑分流
-app.use("/users", userRoutes);
+// 引入路由配置
+app.use(router);
 
 // 處理錯誤訊息 middleware
 app.use((err, req, res) => {
