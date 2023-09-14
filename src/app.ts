@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 
 // 啟動 morgan，紀錄後端接收與回傳資訊
-app.use(morgan("tiny"));
+app.use(morgan("dev"));
 
 // 檢查 API 請求是否符合跨域設定
 app.use(cors(corsConfigs));
@@ -35,7 +35,4 @@ app.use((err, req, res) => {
   console.log("🚀 ~ file: server.ts:33 ~ app.use ~ err:", err);
 });
 
-// 監聽
-app.listen(3000, () => {
-  console.log("Server is running!");
-});
+export default app;
