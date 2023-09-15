@@ -1,10 +1,9 @@
 import express from "express";
 
+// import { userControllers } from "../../../controllers";
+
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  console.log("🚀 ~ file: index.ts:6 ~ router.get ~ res:", res);
-  console.log("🚀 ~ file: index.ts:6 ~ router.get ~ req:", req);
-});
+// router.get("/login", userControllers.getUser);
 
 export default router;

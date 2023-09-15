@@ -6,8 +6,8 @@
   "author": "Joanna Chen <joannachenchencom@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts",
-    "start": "ts-node src/server.ts",
+    "dev": "ts-node-dev src/app.ts",
+    "start": "ts-node src/app.ts",
     "build": "cross-env tsc",
     "format": "prettier --write .",
     "lint-staged": "lint-staged",
@@ -15,7 +15,6 @@
     "lint:auto-fix": "eslint . --fix --ext .ts"
   },
   "dependencies": {
-    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "crypto-js": "^4.1.1",
